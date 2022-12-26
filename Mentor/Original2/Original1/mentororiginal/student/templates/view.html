@@ -1,0 +1,43 @@
+{%extends 'home.html' %}
+{%block main%}
+
+
+{%if user.is_authenticated%}
+{%if st%}
+<div class="div-container">
+  <div class="container-2 shadow-lg">
+    <div class="output-container-1">
+      <h1 class="main-headin w-50">Name:</h1>
+      <p class="w-50">{{st.name}}</p>
+    </div>
+    <div class="output-container-2">
+      <h1 class="main-headin w-50">Sem1 Grade:</h1>
+      <p class="w-50">{{st.sem1}}</p>
+    </div>
+    <div class="output-container-1">
+      <h1 class="main-headin w-50">Sem2 Grade:</h1>
+      <p class="w-50">{{st.sem2}}</p>
+    </div>
+    <div class="output-container-2">
+      <h1 class="main-headin w-50">Hall Ticket Number:</h1>
+      <p class="w-50">{{st.hall_ticket}}</p>
+    </div>
+    <div class="output-container-1">
+      <h1 class="main-headin w-50">Branch:</h1>
+      <p class="w-50">{{st.branch}}</p>
+    </div>
+    <div class="output-container-2">
+      <h1 class="main-headin w-50">Remarks:</h1>
+      <p class="w-50">{{st.remarks}}</p>
+    </div>
+    <div class="output-container-1">
+      <h1 class="main-headin w-50">Attendance Percentage:</h1>
+      <p class="w-50">{{st.attendance}}</p>
+    </div>
+
+{%else%}
+student does not exists
+{%endif%}
+{%endif%}
+
+{%endblock%}

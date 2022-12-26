@@ -1,0 +1,60 @@
+{%extends 'home.html' %}
+{%block main%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container-1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 70vh;
+        }
+        .container-2-2{
+            background-color: whitesmoke;
+            padding: 12px;
+            border-radius: 12px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div class="image-container">
+            <img src="https://res.cloudinary.com/dndtczpp8/image/upload/v1669974318/isometric-data-protection-concept-with-parent-child-login-window-lock-3d_1284-63713_zjtaph-removebg-preview_gms1r9.png"/>
+        </div>
+        <div class="container-2-2 shadow-lg">
+            <h1 class="text-center">Login:</h1>
+            <form method="post">
+                {%csrf_token%}
+                <label for="">Name:</label>
+                <input type="text" name="username" class="form-control" required>
+                <label for="">Password:</label>
+                <input type="password" name="password" class="form-control" required>
+                <div class="pt-4 ">
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<!--     
+    <pre>
+    <form method="post">{%csrf_token%}
+        <b>Login</b>
+    Name:
+    <input type="text" name="username" required>              
+    Password:
+    <input type="password" name="password" required>      
+
+    <button type="submit">login</button>
+    
+</pre>     -->
+</form>
+</body>
+</html>
+{%endblock%}
